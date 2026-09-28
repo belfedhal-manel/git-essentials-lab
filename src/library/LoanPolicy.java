@@ -8,5 +8,5 @@ if (isFaculty) {
     return 3; // Limite Étudiant : 3 livres
 }
     public int loanDays() { return 14; }
-    public int overdueFee(int daysLate) { return daysLate * 100; }
+    public int overdueFee(int daysLate) { return Math.max(0, daysLate) * 100; }
 }
