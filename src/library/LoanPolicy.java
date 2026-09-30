@@ -2,12 +2,11 @@ package library;
 
 public class LoanPolicy {
 
-    public int maxAllowed(boolean isFaculty) {
-        if (isFaculty) {
+    public int maxBooks(MemberType type) {
+        if (type == MemberType.FACULTY) {
             return 5;
-        } else {
-            return 3;
         }
+        return 3;
     }
 
     public int loanDays() {
