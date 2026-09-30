@@ -1,7 +1,19 @@
 package library;
 
 public class LoanPolicy {
-    public int maxBooks(MemberType type) { return 99; }
-    public int loanDays() { return 14; }
-    public int overdueFee(int daysLate) { return daysLate * 100; }
+
+    public int maxBooks(MemberType type) {
+        if (type == MemberType.FACULTY) {
+            return 5;
+        }
+        return 3;
+    }
+
+    public int loanDays() {
+        return 14;
+    }
+
+    public int overdueFee(int daysLate) {
+        return daysLate > 0 ? daysLate * 100 : 0;
+    }
 }
